@@ -1,0 +1,61 @@
+$green: #77c0af;
+
+.itemBlock {
+    padding: 9px;
+    border-bottom: 1px solid #dcdcdc;
+
+    .customCheckbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+
+    .customCheckbox+label {
+        cursor: pointer;
+        font-size: 25px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+
+    .customCheckbox+label::before {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 1px solid #77c0af;
+        border-radius: 0.75em;
+        margin-right: 0.7em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+    }
+
+    :checked+label::before {
+        border-color: $green;
+        color: $green;
+        background-image: url("../../assets/image/check.svg");
+    }
+
+    :not(:disabled):not(:checked)+label:hover::before {
+        border-color: $green;
+    }
+
+    :focus+label::before {
+        box-shadow: 0 0 0 0.1rem #a4d1c7;
+    }
+
+}
+
+.isDone {
+    opacity: 0.5;
+
+    label {
+        text-decoration: line-through;
+        color: #a5a4a4b0;
+    }
+}

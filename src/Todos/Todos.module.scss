@@ -1,0 +1,133 @@
+
+
+.todos {
+    background-color: #f5f5f5;
+    width: 600px;
+
+    .title {
+        margin: 0;
+        text-align: center;
+        font-size: 100px;
+        font-family: 'Roboto Slab', serif;
+
+        color: #e1c7c5;
+    }
+
+    .todosBlock {
+        background-color: #fff;
+        box-shadow: 0px 4px 7px 1px #76767694;
+
+        .inputBlock {
+            position: relative;
+
+            input {
+                font-size: 21px;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 100;
+                padding: 0 20px;
+                border: none;
+                outline: none;
+                height: 63px;
+                width: 560px;
+                box-shadow: 0px 3px 2px 0px rgb(176 176 176 / 30%);
+
+                &::placeholder {
+                    padding-left: 30px;
+                    font-style: italic;
+                    color: #e6e6e6;
+                }
+            }
+            &:active {
+                .inputTitle {
+                    opacity: 0;
+
+                }
+            }
+
+            .inputTitle {
+                position: absolute;
+                left: 15px;
+                top: 9px;
+                font-size: 24px;
+                padding: 10px 0;
+                color: #e6e6e6;
+                
+                i {
+                    font-weight: bold;
+                }
+            }
+
+            button {
+                border: none;
+                outline: none;
+                height: 10px;
+            }
+
+            .errorMessage {
+                position: absolute;
+                color: red;
+                top: -50%;
+                font-size: larger;
+                left: 10px;
+                opacity: 0.7;
+            }
+        }
+
+        .error {
+            border: red 1px solid;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px 5px 0;
+            margin-top: 5px;
+            height: 35px;
+            position: relative;
+
+            .button {
+                border: none;
+                outline: none;
+                font-size: 17px;
+                color: #7e7e7e;
+            }
+
+            .activeFilter {
+                font-size: 17px;
+                padding: 3px 5px;
+                outline: none;
+                border: 1px solid #ecd7d7;
+                border-radius: 3px;
+            }
+
+            .before {
+                position: absolute;
+                top: 100%;
+                height: 5px;
+                width: 98%;
+                left: 5px;
+                background-color: #fff;
+                box-shadow: inset 0px 1px 2px 0px #767676;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 132%;
+                    height: 3.5px;
+                    width: 98%;
+                    left: 5px;
+                    background-color: #fff;
+                    /* box-shadow: inset 0px 1px 2px 0px #767676; */
+                    box-shadow: 0px 1px 2px 0px #767676;
+                }
+            }
+        }
+    }
+
+    button {
+        color: #7e7e7e;
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+}
